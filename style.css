@@ -1,0 +1,552 @@
+/* =========================================
+   1. PARAMÈTRES GÉNÉRAUX
+========================================= */
+
+/* Sélecteur universel : s'applique à tous les éléments HTML */
+* {
+    margin: 0;              /* Supprime les marges extérieures par défaut */
+    box-sizing: border-box; /* Inclut les bordures et les espacements dans les dimensions des éléments */
+}
+
+/* Apparence générale de la page */
+body {
+    background-color: #F8F4F0;
+    background-image: url("Images/paper-texture-cream.png");
+    background-repeat: repeat;
+    color: #463D4C;
+}
+
+/* Curseur personnalisé sur tous les éléments */
+* {
+    cursor: url("Images/curseur.png") 16 16, auto !important;
+}
+
+/* Défilement fluide entre les sections */
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* =========================================
+   2. HEADER - EN-TÊTE DU SITE
+========================================= */
+
+/* Mise en page de l'en-tête */
+header {
+    background-color: #B8CDB5; /* Couleur de fond verte */
+    padding: 2rem 4%;          /* Espace intérieur : haut/bas puis gauche/droite */
+    display: flex;             /* Active Flexbox pour organiser les éléments */
+    align-items: center;       /* Centre les éléments verticalement */
+    justify-content: center;   /* Centre les éléments horizontalement */
+    gap: 80px;                 /* Espace entre les éléments du header */
+}
+
+/* Conteneur du titre et du logo */
+.header-content {
+    display: flex;             /* Active Flexbox */
+    flex-direction: column;   /* Place les éléments les uns sous les autres */
+    align-items: center;       /* Centre le titre et le logo horizontalement */
+    gap: 0;                    /* Aucun espace supplémentaire entre les éléments */
+}
+
+/* Titre Portfolio */
+.header-content h1 {
+    font-size: 3rem;                       /* Taille du texte */
+    font-family: "Cherry Bomb One", sans-serif; /* Police du titre */
+    color: #463D4C;                        /* Couleur du titre */
+    margin: 0;                             /* Supprime les marges extérieures */
+}
+
+/* Logo personnel */
+.header-content img {
+    width: 260px; /* Largeur du logo */
+    height: auto; /* Adapte la hauteur pour conserver les proportions */
+}
+
+/* Illustrations décoratives à gauche et à droite */
+.header-decoration {
+    width: 23%;          /* Largeur proportionnelle au conteneur */
+    height: auto;        /* Conserve les proportions de l'image */
+    object-fit: contain; /* Affiche l'image entière sans la déformer */
+}
+
+/* Style général des titres H1 */
+h1 {
+    font-size: 3rem;                       /* Taille des titres principaux */
+    font-family: "Cherry Bomb One", sans-serif; /* Police des titres */
+    color: #463D4C;                        /* Couleur des titres */
+    margin: 0;                             /* Supprime les marges par défaut */
+}
+
+
+/* =========================================
+   3. TITRES ET TEXTES
+========================================= */
+
+/* Titres des sections (H2) */
+h2 {
+    font-family: "Dongle", sans-serif; /* Police des titres de section */
+    background-color: #EBA18F;         /* Fond couleur pêche */
+    border-radius: 25px;               /* Arrondit les coins du fond */
+    padding: 1rem;                     /* Espace intérieur autour du texte */
+    margin: 10px;                      /* Espace extérieur autour du titre */
+    color: #463D4C;                    /* Couleur du texte */
+}
+
+/* Sous-titres (H3) */
+h3 {
+    font-family: "Nanum Gothic", sans-serif; /* Police des sous-titres */
+    font-weight: 400;                       /* Épaisseur normale du texte */
+}
+
+/* Paragraphes */
+p {
+    font-family: "Nanum Gothic", sans-serif; /* Police des paragraphes */
+    font-weight: 400;                       /* Épaisseur normale du texte */
+    padding: 1rem;                          /* Espace intérieur autour du texte */
+}
+
+
+/* =========================================
+   4. NAVIGATION - MENU DU SITE
+========================================= */
+
+/* Barre de navigation */
+nav {
+    font-family: "Nanum Gothic", sans-serif; /* Police du menu */
+    font-weight: 400;                       /* Épaisseur du texte */
+    padding: 1rem;                          /* Espace intérieur du menu */
+    border: 5px #B8CDB5 solid;              /* Bordure verte de 5px */
+}
+
+/* Organisation des liens du menu */
+nav ul {
+    display: flex;             /* Place les éléments du menu sur une ligne */
+    justify-content: center;   /* Centre les liens horizontalement */
+    align-items: center;       /* Aligne les liens verticalement */
+    gap: 40px;                 /* Espace entre les liens */
+    list-style: none;          /* Supprime les puces de la liste */
+    padding: 0;                /* Supprime l'espace intérieur par défaut */
+}
+
+/* Apparence des liens */
+nav a {
+    text-decoration: none;       /* Supprime le soulignement */
+    color: #463D4C;               /* Couleur du texte */
+    padding: 10px 15px;           /* Espace autour du texte */
+    border-radius: 20px;          /* Arrondit les coins du fond */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Adoucit le changement de couleur */
+}
+
+/* Effet au survol de la souris */
+nav a:hover {
+    background-color: #EBA18F; /* Fond pêche au survol */
+    color: #463D4C;             /* Conserve le texte violet foncé */
+}
+
+/* =========================================
+   5. FOOTER - PIED DE PAGE
+========================================= */
+
+/* Mise en forme du pied de page */
+footer {
+    background-color: #B8CDB5; /* Fond vert */
+    font-size: 1rem;           /* Taille du texte */
+    text-align: center;        /* Centre le texte horizontalement */
+}
+
+/* Texte du footer */
+footer p {
+    font-family: "Cherry Bomb One", sans-serif; /* Police du texte */
+}
+
+/* Illustration retour en haut */
+.retour-haut {
+    display: inline-block;
+    width: 180px;
+    transition: transform 0.3s ease;
+}
+
+.retour-haut img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.retour-haut:hover {
+    transform: translateY(-8px);
+}
+
+
+/* =========================================
+   6. MY WORK - MES PROJETS
+========================================= */
+
+
+/* Conteneur principal des projets */
+.project-container {
+    display: flex;              /* Affiche les projets sur une même ligne */
+    justify-content: center;    /* Centre les projets horizontalement */
+    align-items: flex-start;    /* Aligne les projets en haut */
+    gap: 90px;                  /* Espace entre chaque projet */
+    padding: 35px 20px;          /* Ajoute de l'espace en haut, en bas et sur les côtés */
+}
+
+/* Organisation du contenu de chaque projet */
+.project-container article {
+    display: flex;              /* Active Flexbox */
+    flex-direction: column;     /* Place les éléments verticalement */
+    align-items: center;        /* Centre le titre, le texte et l'image */
+    gap: 10px;                  /* Réduit l'espace entre les éléments */
+    text-align: center;         /* Centre le texte */
+}
+
+/* Mise en forme des titres des projets */
+.project-container article h3 {
+    margin: 0;                  /* Supprime les marges par défaut */
+}
+
+/* Descriptions des projets */
+.project-container article p {
+    padding: 0;                 /* Supprime l'espacement intérieur */
+    margin-bottom: 15px;        /* Ajoute un espace avant l'illustration */
+}
+
+/* Dimensions et affichage des images */
+.project-image {
+    width: 150px;               /* Largeur des images */
+    height: 150px;              /* Hauteur des images */
+    object-fit: contain;        /* Conserve les proportions de l'image */
+}
+
+/* =========================================
+   7. ABOUT ME - À PROPOS
+========================================= */
+
+/* Conteneur principal de la section */
+.about-container {
+    display: grid;                    /* Active CSS Grid pour créer une grille */
+    grid-template-columns: 1fr 1.5fr; /* Crée deux colonnes : la seconde est plus large */
+    align-items: center;              /* Centre les éléments verticalement */
+    gap: 50px;                        /* Espace entre les deux colonnes */
+    max-width: 1100px;                /* Limite la largeur maximale du contenu */
+    margin: 0 auto;                   /* Centre le conteneur horizontalement */
+    padding: 40px;                    /* Espace intérieur autour du contenu */
+}
+
+/* Conteneur de l'illustration personnelle */
+.about-visual {
+    display: flex;             /* Active Flexbox */
+    justify-content: center;   /* Centre l'image horizontalement */
+    align-items: center;       /* Centre l'image verticalement */
+}
+
+/* Illustration personnelle */
+.about-image {
+    width: 500px;          /* Largeur de l'image */
+    height: auto;          /* Conserve les proportions */
+    object-fit: contain;   /* Évite de déformer l'image */
+}
+
+/* Contenu de présentation */
+.about-content {
+    display: flex;             /* Active Flexbox */
+    flex-direction: column;   /* Place les éléments verticalement */
+    gap: 20px;                 /* Espace entre les éléments */
+}
+
+/* Sous-titres de la présentation */
+.about-content h3 {
+    font-family: 'Nanum Gothic', sans-serif; /* Police des sous-titres */
+    font-size: 1.5rem;                       /* Taille du texte */
+    margin: 0;                               /* Supprime les marges */
+}
+
+/* Bloc contenant les paragraphes de présentation */
+.about-text {
+    max-width: 700px; /* Limite la largeur du texte pour faciliter la lecture */
+}
+
+/* Paragraphes de présentation */
+.about-text p {
+    line-height: 1.4;      /* Espace entre les lignes du texte */
+    margin-bottom: 11px;   /* Espace sous chaque paragraphe */
+}
+
+/* Bloc regroupant les informations de contact */
+.about-contact {
+    display: flex;             /* Active Flexbox */
+    flex-direction: column;   /* Place les contacts les uns sous les autres */
+    gap: 15px;                 /* Espace entre chaque contact */
+}
+
+/* Organisation de chaque ligne de contact */
+.contact-container {
+    display: flex;           /* Place l'icône et le lien sur une ligne */
+    align-items: center;     /* Aligne l'icône et le texte verticalement */
+    gap: 40px;                /* Espace entre l'icône et le lien */
+}
+
+/* Liens de contact */
+.contact-container a {
+    text-decoration: none;                 /* Supprime le soulignement */
+    color: #333;                            /* Couleur initiale du lien */
+    font-family: 'Nanum Gothic', sans-serif; /* Police du lien */
+    transition: color 0.3s ease;            /* Rend le changement de couleur progressif */
+}
+
+/* Effet au survol des liens de contact */
+.contact-container a:hover {
+    color: #EBA18F; /* Change la couleur du texte au survol */
+}
+
+
+/* =========================================
+   8. EDUCATION - FORMATIONS
+========================================= */
+
+/* Grille des formations */
+.education-container {
+    display: grid;                         /* Active CSS Grid */
+    grid-template-columns: repeat(2, 1fr); /* Crée deux colonnes de même largeur */
+    column-gap: 60px;                      /* Espace horizontal entre les colonnes */
+    row-gap: 65px;                         /* Espace vertical entre les lignes */
+    max-width: 900px;                      /* Limite la largeur de la grille */
+    margin: 0 auto;                        /* Centre la grille horizontalement */
+    padding: 30px 0;                       /* Espace intérieur : haut/bas puis gauche/droite */
+}
+
+/* Présentation de chaque formation */
+.education-item {
+    display: flex;             /* Active Flexbox */
+    flex-direction: column;   /* Place les éléments verticalement */
+    align-items: center;       /* Centre les éléments horizontalement */
+    text-align: center;        /* Centre le texte */
+    gap: 10px;                 /* Espace entre les éléments */
+}
+
+/* Icônes des formations */
+.education-icon {
+    width: 60px;          /* Largeur de l'icône */
+    height: 60px;         /* Hauteur de l'icône */
+    object-fit: contain;  /* Conserve les proportions de l'image */
+}
+
+
+/* =========================================
+   9. TOOLS - OUTILS
+========================================= */
+
+/* Conteneur regroupant les outils */
+.tools-container {
+    display: flex;             /* Place les outils sur une même ligne */
+    justify-content: center;   /* Centre les outils horizontalement */
+    align-items: flex-start;   /* Aligne les outils en haut */
+    gap: 120px;                /* Espace entre chaque outil */
+    padding: 30px 0;            /* Espace intérieur en haut et en bas */
+}
+
+/* Présentation de chaque outil */
+.tool {
+    display: flex;             /* Active Flexbox */
+    flex-direction: column;   /* Place l'icône au-dessus du nom */
+    align-items: center;       /* Centre l'icône et le texte */
+    gap: 12px;                 /* Espace entre l'icône et le nom */
+}
+
+/* Icônes des logiciels */
+.tool img {
+    width: 60px;          /* Largeur de l'icône */
+    height: 60px;         /* Hauteur de l'icône */
+    object-fit: contain;  /* Conserve les proportions de l'image */
+}
+
+
+/* =========================================
+   10. HOBBIES - LOISIRS
+========================================= */
+
+/* Conteneur regroupant les loisirs */
+.hobbies-container {
+    display: flex;             /* Place les loisirs sur une même ligne */
+    justify-content: center;   /* Centre les loisirs horizontalement */
+    align-items: flex-start;   /* Aligne les loisirs en haut */
+    gap: 120px;                /* Espace entre chaque loisir */
+    padding: 30px 0;            /* Espace intérieur en haut et en bas */
+}
+
+/* Présentation de chaque loisir */
+.hobby {
+    display: flex;             /* Active Flexbox */
+    flex-direction: column;   /* Place l'icône au-dessus du nom */
+    align-items: center;       /* Centre l'icône et le texte */
+    gap: 12px;                 /* Espace entre l'icône et le nom */
+}
+
+/* Icônes des loisirs */
+.hobby img {
+    width: 60px;          /* Largeur de l'image */
+    height: 60px;         /* Hauteur de l'image */
+    object-fit: contain;  /* Conserve les proportions de l'image */
+}
+
+
+/* =========================================
+   11. RESPONSIVE - ADAPTATION AUX ÉCRANS
+========================================= */
+
+/* TABLETTES */
+@media screen and (max-width: 768px) {
+
+    /* HEADER */
+    header {
+        gap: 20px;
+        padding: 2rem 3%;
+    }
+
+    .header-decoration {
+        width: 15%;
+    }
+
+    .header-content img {
+        width: 200px;
+    }
+
+    /* NAVIGATION */
+    nav ul {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    /* PROJETS */
+    .project-container {
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+
+    /* À PROPOS */
+    .about-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 25px;
+    }
+
+    .about-image {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    /* FORMATIONS */
+    .education-container {
+        column-gap: 30px;
+        row-gap: 40px;
+        padding: 20px;
+    }
+
+    /* OUTILS ET LOISIRS */
+    .tools-container,
+    .hobbies-container {
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+
+    /* FOOTER */
+    .retour-haut {
+        width: 150px;
+    }
+}
+
+
+/* TÉLÉPHONES */
+@media screen and (max-width: 480px) {
+
+    /* HEADER */
+    header {
+        width: 100%;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 10px;
+        padding: 30px 15px;
+    }
+
+    /* On masque les illustrations décoratives sur petit écran */
+    .header-decoration {
+        display: none;
+    }
+
+    .header-content h1 {
+        font-size: 2.3rem;
+    }
+
+    .header-content img {
+        width: 160px;
+    }
+
+    /* NAVIGATION */
+    nav {
+        width: 100%;
+        padding: 10px;
+    }
+
+    nav ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5px;
+        width: 100%;
+    }
+
+    nav li:last-child {
+        grid-column: 1 / -1;
+    }
+
+    nav a {
+        display: block;
+        text-align: center;
+        padding: 10px 5px;
+        font-size: 0.9rem;
+    }
+
+    /* TITRES */
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    /* PROJETS */
+    .project-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 35px;
+    }
+
+    /* À PROPOS */
+    .about-container {
+        padding: 15px;
+    }
+
+    .about-image {
+        max-width: 280px;
+    }
+
+    .contact-container {
+        gap: 15px;
+    }
+
+    /* FORMATIONS */
+    .education-container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    /* OUTILS ET LOISIRS */
+    .tools-container,
+    .hobbies-container {
+        gap: 30px;
+        padding: 20px;
+    }
+
+    /* FOOTER */
+    .retour-haut {
+        width: 130px;
+    }
+}
+
